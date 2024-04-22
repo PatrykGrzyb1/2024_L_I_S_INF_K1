@@ -1,6 +1,6 @@
 run:
 	python main.py
-.PHONY: test
+.PHONY:test
 test:
 	PYTHONPATH=. py.test --verbose -s
 deps:
@@ -15,7 +15,7 @@ docker_run: docker_build
 	--name hello-world-printer-dev \
 	-p 5000:5000 \
 	-d hello-world-printer 
-USERNAME=wrx86344
+USERNAME=wrx88123
 TAG=$(USERNAME)/hello-world-printer
 docker_push: docker_build
 	@docker login --username $(USERNAME) --password $${DOCKER_PASSWORD}; \
